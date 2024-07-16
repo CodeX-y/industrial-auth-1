@@ -1,5 +1,4 @@
 class CommentPolicy < ApplicationPolicy
-  #show, edit, create, destroy, update
   attr_reader :user, :comment
 
   def initialize(user, comment)

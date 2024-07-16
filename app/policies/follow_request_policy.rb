@@ -1,5 +1,4 @@
 class FollowRequestPolicy < ApplicationPolicy
-  #create, detroy, update
   attr_reader :user, :follow_request
 
   def initialize(user, follow_request)

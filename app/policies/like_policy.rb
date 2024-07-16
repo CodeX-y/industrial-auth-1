@@ -1,5 +1,4 @@
 class LikePolicy < ApplicationPolicy
-  #create. destroy
   attr_reader :user, :like
 
   def initialize(user, like)
