@@ -11,4 +11,20 @@ class PhotoPolicy < ApplicationPolicy
       !photo.owner.private? ||
       photo.owner.followers.include?(user)
   end
+
+  def create?
+    user == current_user
+  end
+
+  def destroy?
+    user == current_user
+  end
+
+  def edit?
+    user == current_user
+  end
+
+  def update?
+    user == current_user
+  end
 end
