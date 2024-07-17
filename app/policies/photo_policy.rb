@@ -17,14 +17,14 @@ class PhotoPolicy < ApplicationPolicy
   end
 
   def destroy?
-    create?
+    edit?
   end
 
   def edit?
-    create?
+    user == photo.owner
   end
 
   def update?
-    create?
+    edit?
   end
 end
