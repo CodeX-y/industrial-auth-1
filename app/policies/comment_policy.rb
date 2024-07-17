@@ -15,7 +15,7 @@ class CommentPolicy < ApplicationPolicy
   end
 
   def update?
-    user == comment.author
+    edit?
   end
 
   def create?
@@ -23,7 +23,7 @@ class CommentPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user == comment.author
+      edit?
   end
 
 end
